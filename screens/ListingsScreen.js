@@ -13,8 +13,6 @@ function ListingsScreen(props) {
 
   const [refreshed, setRefreshed] = useState(null);
 
-  const delay = (ms) => new Promise((res) => setTimeout(res, ms));
-
   useEffect(() => {
     getListingsApi.request();
   }, []);
@@ -22,7 +20,7 @@ function ListingsScreen(props) {
   const randomizeData = () => {
     const data = getListingsApi.data;
     recursion(data, 0);
-    setRefreshed((refreshed + 1) % 2);
+    setTimeout(() => setRefreshed((refreshed + 1) % 2));
   };
 
   const recursion = (data, count) => {
