@@ -21,6 +21,7 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "An app to fetch and view photos from JSON data. It allows horizontal scrolling through the list of photos and has a button to reorder the list of photos."
   }
 }
